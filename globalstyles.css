@@ -47,15 +47,8 @@ h2{
 }
 h3{
 	font-size: 1.1rem;
-    	font-weight: bold;
+	font-weight: bold;
 	margin-bottom: 20px;
-}
-@media screen and (min-width: 768px) {
-	#aside-content{
-		padding-left: 20px;
-		padding-right: 20px;
-		margin-left:20px;
-	}
 }
 .aside-element h2{
 	text-align: center;
@@ -68,6 +61,30 @@ h3{
     margin: 0 0 20px;
     text-transform: uppercase;
 	border-radius: 15px 15px 0px 0px;
+}
+@media screen and (min-width: 768px) {
+	#aside-content{
+		margin-right: 20px;
+		margin-left: 40px;
+		margin-top: 65px;
+		background-color: #fff;
+		box-shadow: 0 3px 14px rgba(0,0,0,0.2);
+		height: fit-content;
+		padding: 20px;
+	}
+	.aside-element h2 {
+		text-align: center;
+		letter-spacing: 6px;
+		color: darkgray;
+		font-size: 1rem;
+		padding: 13px 5px;
+		position: relative;
+		margin: 0 0 20px;
+		text-transform: uppercase;
+		border-radius: 0px;
+		border-bottom: 2px solid darkgray;
+		background: #fff;
+	}
 }
 .aside-element ul{
 	padding-left: 10px;
@@ -102,6 +119,9 @@ h3{
 .article-answer{
 	font-size: 1.1rem;
 }
+a {
+    font-size: 1.1rem;
+}
 @media screen and (max-width: 767px) {
 	h2{
 		font-size: 1.3rem;
@@ -120,4 +140,27 @@ h3{
 	.article-answer{
 		font-size: 1.27rem;
 	}
+	a {
+		font-size: 1.3rem;
+	}
+}
+.scroll_top{
+	position: fixed;
+    bottom: 1.6em;
+    right: 1.6em;
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    background: cadetblue;
+    box-shadow: 0 0 2px rgba(0,0,0,.05);
+    transition: border .3s ease-in-out;
+    color: #fff;
+    border-radius: 15px;
+}
+a.scroll_top:hover {
+    text-decoration: none;
+    color: #fff;
 }
