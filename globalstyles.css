@@ -143,6 +143,9 @@ a {
 	a {
 		font-size: 1.3rem;
 	}
+	.aside-element h2{
+		font-size: 1.1rem;
+	}
 }
 .scroll_top{
 	position: fixed;
