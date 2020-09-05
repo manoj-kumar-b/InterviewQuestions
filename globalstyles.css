@@ -164,3 +164,6 @@ a.scroll_top:hover {
     text-decoration: none;
     color: #fff;
 }
+ul li{
+	font-size: 1.15rem;
+}
