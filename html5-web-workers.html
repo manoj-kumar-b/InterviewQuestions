@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML5 Web Workers</title>
+		<meta name="keywords" content="html5 web workers, html web workers, web workers, web workers html, web workers html5">
+		<meta name="description" content="HTML5 Web Workers are easy to learn and easy to implement and all the concepts you need to know about web workers with html5 from definition of a worker to the termination and reuse of the worker are covered.">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+		<meta name="google-site-verification" content="ldHkgb0XV9IUi3WiRRVUySxRU4GfTejvJwSGUjIQgWM" />
+		<meta itemprop="content-type" content="text/html; charset=UTF-8">
+		<meta itemprop="X-UA-Compatible" content="IE=Edge">
+		<meta http-equiv="x-dns-prefetch-control" content="on">
+		<meta name="locale" content="en_US">
+		<link rel="canonical" href="https://mkblog.tech/html5-web-workers.html">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="HTML5 Web Workers">
+		<meta property="og:description" content="HTML5 Web Workers are easy to learn and easy to implement and all the concepts you need to know about web workers with html5 from definition of a worker to the termination and reuse of the worker are covered.">
+		<meta property="og:url" content="https://mkblog.tech/html5-web-workers.html">
+		<meta property="og:image" content="https://mkblog.tech/webworker.png">
+		<link rel="icon" href="favicon.jpg" type="image/x-icon" sizes="16x16">
+		<link rel="apple-touch-icon" href="favicon.jpg">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+		<link rel="stylesheet" href="globalstyles.css">
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-177308186-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-177308186-1');
+		</script>
+		<script data-ad-client="ca-pub-9646998711953034" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	</head>
+	<body>
+		<div id="site-body">
+			<header class="site-header">
+				<div class="container">
+					<nav class="navbar navbar-expand-lg navbar-light nav-padding">
+						<div>
+							<a class="navbar-brand navbar-title custom-title" href="index.html">MK BLOG</a>
+						</div>
+						<div class="collapse navbar-collapse" id="navigationHeadingBar">
+							<ul class="navbar-nav ml-lg-auto text-center">
+								<li class="nav-item mr-lg-4 nav-list-item-custom">
+									<a class="nav-link" href="index.html">HOME</a>
+								</li>
+								<li class="nav-item mr-lg-4 nav-list-item-custom">
+									<a class="nav-link" href="html-interview-questions.html">HTML</a>
+								</li>
+								<li class="nav-item mr-lg-4 nav-list-item-custom">
+									<a class="nav-link" href="aem-interview-questions.html">AEM</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</header>
+			<div id="main-content">
+				<div class="container">
+					<div class="row">
+						<div id="primary-content" class="col-lg-8">
+							<div class="article-header">
+								<h1>HTML5 Web Workers</h1>
+								<span class="border-bottom-style"></span>
+							</div>
+							<div class="article-image">
+								<img width="720" height="400" src="webworker.png" alt="html5 web workers" title="html5 web workers">
+							</div>
+							<div class="article-content">
+								<h2>HTML5 Web Workers play a crucial role in reducing the load on main execution thread of browser there by increasing performance. Web Workers are the simple means of running tasks in the background without interfering with user interface. In this article we are going to learn about html5 web workers so let’s get started.
+								</h2>
+								<div class="descriptive-content">
+									<h3>
+										<strong>Background of JavaScript Engine :</strong>
+									</h3>
+									<p>JavaScript Engine is known for executing single thread at once. Due to this reason there is a slowness in execution context for big websites which means processing large amount of data, handling more requests, executing many files will be harder and slower. Web Workers will be concatenated to the execution context as an external thread and process the requests needed in a separate execution context without interfering the actual JavaScript processing flow. With Web Workers JavaScript can be used as a multi threaded based environment.</p>
+									<h3><strong>Introduction to Web Workers :</strong></h3>
+									<p>Web Worker is basically a JavaScript Object created using a Constructor. Worker code will be run in a separate global context different from current window. One important thing to note here is we cannot perform DOM operations with a worker. Data transfer between worker and browser will be happened through events. New workers can also be spawned from the current worker if the hosted origin from parent is different with the current.</p>
+									<h3><strong>Web Workers Types:</strong></h3>
+									<p>There are two kinds of workers and they are :</p>
+									<ul><li>Dedicated Workers</li><li>Shared Workers</li></ul>
+									<h3><strong>What are Dedicated Workers ?</strong></h3>
+									<p>As per the name we can say that this type of workers are dedicated resources of the specific script. Dedicated Worker is basically invoked when it is called specifically by the script.</p>
+									<h3><strong>What are Shared Workers ?</strong></h3>
+									<p>Shared workers are invoked or accessed by multiple scripts from different execution contexts but the origin is same. Sometimes shared workers cannot communicate with events if the window type is different. For Example, If we are spawning a shared worker and we need to communicate with it from an incognito window then communication will fail. This problem is happening only on Firefox as noticed and all other browsers will work fine as per the current statistics.</p>
+									<h3><strong>Browser Support :</strong></h3>
+									<p>Web Workers are supported in all major browsers without any issues. In this article we are creating a web worker based on HTML5 and we are giving insight on Dedicated Worker only. For Shared Worker, you can refer to this awesome article from Mozilla – <a rel="noreferrer noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Using_web_workers" target="_blank">Using Web Workers</a></p>
+									<p>Before starting we can quickly check if our browser is supported or not with the following code :</p>
+									<pre>
+										<code>
+											if (typeof(Worker) !== "undefined") {
+											  console.log("Hurray, We have web worker support");
+											} else {
+											  console.log("Sorry, Web workers are not supported");
+											}
+										</code>
+									</pre>
+									<h3><strong>Creating a Web Worker JS File :</strong></h3>
+									<p>Now, let’s start by writing our worker code in an external JS file. Let’s name that file with firstWorker.js</p>
+									<pre>
+										<code>
+											var i = 0;
+											function executeForLoop() {
+												for(var j=0;j&lt;500000;j++){
+													i += j;
+												}
+												postMessage(i);
+											}
+
+											executeForLoop();
+										</code>
+									</pre>
+									<p>Above code is having a For Loop with 500000 iterations and adding every value of j to i and posts message back once execution completes in For loop.</p>
+									<h3><strong>Spawning a Web Worker :</strong></h3>
+									<p>As we already know that a worker is created by a constructor, let’s get started with it.</p>
+									<pre>
+										<code>var firstWorker = new Worker('firstWorker.js');</code>
+									</pre>
+									<p>Now, let’s go ahead and add an event listener to send and receive messages from the worker.</p>
+									<pre>
+										<code>
+											firstWorker.onmessage = function(event){
+												document.getElementById("result").innerHTML = event.data;
+											};
+										</code>
+									</pre>
+									<p>In worker file we need to keep following code to send the message.</p>
+									<pre>
+										<code>
+											onmessage = function(e) {
+												postMessage(e.result);
+											}
+										</code>
+									</pre>
+									<p>One important point to note here is that the data between main thread and the worker is either copied or transfered but not shared.</p>
+									<h3><strong>Terminating a Web Worker :</strong></h3>
+									<p>When a worker is initiated, it will listen to the events until we terminate it. Below is the format used for terminating a worker.</p>
+									<pre>
+										<code>firstWorker.terminate();</code>
+									</pre>
+									<h3><strong>Can we Re-Use the Worker after termination ?</strong></h3>
+									<p>Yes. We can still re-use the same worker by setting its value to undefined.</p>
+									<h3><strong>Importing Scripts using Worker :</strong></h3>
+									<p>Workers have access to the global function importScripts() with which we can import whatever script we need in a separate thread execution context.</p>
+									<p>For example:</p>
+									<pre>
+										<code>importScripts('filename.js');</code>
+									</pre>
+									<p>Above code will import the mentioned file in a separate execution context. With this concept it is easier to load all the less critical JavaScript files in a separate thread which will basically reduce the load on main thread and execution will complete faster and site loading speed will be increased significantly.</p>
+									<p>Note: There is no specific order to execute scripts. They are processed in any order synchronously.</p>
+									<h3><strong>Final Touch :</strong></h3>
+									<p>Web workers are easy to operate and function. Since, worker cannot access DOM we don’t really need to worry about safety and concurrency of the worker thread and it’s communication with main thread. workers are designed to load JavaScript files asynchronously which will drastically improve the performance of page since we are loading all the less critical files in a different thread by reducing load on main thread. With the worker, we can even hit an ajax request but in a native JavaScript way by using XMLHttpRequest. Navigator object is also accessible to the worker. The only main thing is we cannot directly manipulate the DOM with the worker.</p>
+									<p>For more information on worker functions and interfaces, see <a rel="noreferrer noopener" href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers" target="_blank">Functions and Interfaces available to workers</a>.</p>
+									<p>We will be bringing up more information on updates to html5 web workers soon.</p>
+									<p>web workers html5 are the most efficient concept to increase performance and reduce load on main execution thread. Since, web workers html5 are easy to use so please give it a try and let us know your thoughts.</p>
+									<p>Hope you like the article. Thanks for Reading !!!</p>
+								</div>
+							</div>
+						</div>
+						<aside id="aside-content" class="col-lg-3" role="complementary">
+							<section class="aside-element site-pages">
+								<h2>Interview Questions</h2>
+								<ul>
+									<li>
+										<a href="html-interview-questions.html">HTML Interview Questions and Answers</a>
+									</li>
+									<li>
+										<a href="aem-interview-questions.html">AEM Interview Questions and Answers</a>
+									</li>
+								</ul>
+							</section>
+							<section class="aside-element site-tags">
+								<h2>Tags</h2>
+								<div class="tag-container">
+									<a href="html5-web-workers.html">HTML5 Web Workers</a>
+								</div>
+							</section>
+						</aside>
+						<div id="backToTop">
+							<a href="#site-body" class="scroll_top">
+								Top
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

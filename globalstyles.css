@@ -11,6 +11,7 @@
 .site-header{
 	background: aliceblue;
     padding-bottom: 10px;
+	height: 60px;
 }
 #main-content{
 	margin-top: 40px;
@@ -169,4 +170,19 @@ a.scroll_top:hover {
 }
 ul li{
 	font-size: 1.15rem;
+}
+.descriptive-content p{
+	font-size: 1.25rem;
+}
+.descriptive-content pre{
+	white-space: pre-line;
+	background: #eee;
+	margin-bottom: 0px;
+	font-size: 1rem;
+	padding: 1.2rem;
+	margin-bottom: 20px;
+}
+.descriptive-content pre code{
+	line-height: 1.5;
+	width: 100%;
 }
